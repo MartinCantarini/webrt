@@ -1,0 +1,66 @@
+
+
+<h1>Abonado telefónico: <%=@user.atabonadotelefonico%></h1>
+<div class="row">
+  <%id=@user.id%>
+  <div class="col-md-12">
+    <div class="link_right">
+      <%=link_to "Descargar .pdf", "/users/#{id}.pdf", class: "btn btn-info"%>
+      <%=link_to "Editar este registro", edit_user_path, class: "btn btn-primary"%>
+      <a class="btn btn-danger" href="/users/<%=id %>/destroy" onclick="return confirm('Está seguro que desea eliminar este registro?');">Delete</a>
+    </div>
+  </div>
+</div>
+<h3><u>Abonado telefónico:</u></h3><br>
+<div class="row">
+  <div class="col-md-2">Codigo de area: <%=@user.atcodigodearea%></div>
+  <div class="col-md-3">Abonado telefónico: <%=@user.atabonadotelefonico%></div>
+  <div class="col-md-2">Celular o fijo: <%=@user.atcelularofijo%></div>
+  <div class="col-md-5"></div>
+</div>
+<div class="row">
+  <div class="col-md-2">Empresa:<%=@user.atempresa%></div>
+  <div class="col-md-3">Localidad del código de área: <%=@user.atlocalidadcodigoarea%></div>
+  <div class="col-md-7"></div>
+</div>
+<h3><u>Titular tentativo:</u></h3><br>
+<div class="row">
+  <div class="col-md-4">Nombre y apellido: <%=@user.ttnombre%></div>
+  <div class="col-md-4">Domicilio: <%=@user.ttdomicilio%></div>
+  <div class="col-md-4">Localidad: <%=@user.ttlocalidad%></div>
+  <div class="col-md-4">Documento: <%=@user.ttdocumento%></div>
+</div>
+<h3><u>Titular:</u></h3><br>
+<div class="row">
+  <div class="col-md-4">Nombre y apellido: <%=@user.tnombre%></div>
+  <div class="col-md-4">Domicilio: <%=@user.tdomicilio%></div>
+  <div class="col-md-4">Localidad: <%=@user.tlocalidad%></div>
+  <div class="col-md-4">Documento: <%=@user.tdocumento%></div>
+</div>
+<h3><u>Usuario:</u></h3><br>
+<div class="row">
+  <div class="col-md-4">Nombre y apellido: <%=@user.unombre%></div>
+  <div class="col-md-4">Domicilio: <%=@user.udomicilio%></div>
+  <div class="col-md-4">Localidad: <%=@user.ulocalidad%></div>
+  <div class="col-md-4">Documento: <%=@user.udocumento%></div>
+</div>
+<h3><u>Requerido en las siguientes investigaciones:</u></h3>
+
+<div class="row">
+<div class="col-md-9"></div>
+  <div class="col-md-3"><%=link_to "Agregar investigación", new_crime_path(:format=>@user.id) , class: "btn btn-success " ,style: "float:right"%></div>
+</div>
+<table class="table table-hover">
+  <tr>
+  	<th>IPP o CAUSA Nro.:</th>
+  	<th>Fecha de requerimiento</th>
+  </tr>
+  <%crimesofuser=@user.crimes%>
+  <%crimesofuser.all.each do |cof|%>
+  <tr>
+      <td><%=link_to cof.ippcausanro, cof%></td>
+  	  <td><%=cof.fecha%></td>
+    <%end%>
+  </tr>
+</table>
+

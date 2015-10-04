@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>IPP o CAUSA Nro.: <%=@crime.ippcausanro%></h1><br>
+<h2><u>Requerido en investigación:</u></h2><br>
+<div class="row">
+  <div class="col-md-12">
+     <div class="link_right">
+         <%id=@crime.id%>
+         <a class="btn btn-danger" href="/crimes/<%=id %>/destroy" onclick="return confirm('Está seguro que desea eliminar esta investigación?');">Delete</a>
+         <%=link_to "Editar esta investigación", edit_crime_path, class: "btn btn-primary" ,style: "float:right"%>
+     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">IPP o CAUSA Nro: <%=@crime.ippcausanro%></div>
+  <div class="col-md-8">Delito: <%=@crime.delito%></div>
+  <div class="col-md-4">Fecha de requerimiento: <%=@crime.fecha%></div>
+  <div class="col-md-8">Interviene: <%=@crime.interviene%></div>
+  <div class="col-md-12">Detalles de la investigación: <%=@crime.detalles%></div>
+  </div>
+</body></html>

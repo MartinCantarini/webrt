@@ -1,0 +1,14 @@
+.barranavegacion{
+	background-image:url("navlogo2.jpeg");
+	color: #ffffff;
+	list-style: none;
+	text-align: right;
+	height: 100px;
+	padding: 25px 0px 25px 0px;
+}
+
+.barranavegacion > li{
+	display: inline-block;
+	padding: 0px 25px 0px 25px;
+}
+

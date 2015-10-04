@@ -1,0 +1,11 @@
+<%= bootstrap_form_for(@crime) do |c| %>
+  <%id=params[:format]%>
+  <%= c.text_field :ippcausanro , label: "IPP o CAUSA Nro*"%>
+  <%= c.text_field :delito, label: "Delito" %>
+  <%= c.text_field :interviene, label: "Interviene" %>
+  <%= c.hidden_field :user_id, :value => id %>
+  <%= c.text_area :detalles, label: "Detalles de la investigación" %>
+  <%= c.hidden_field :fecha, :value => DateTime.now.to_date %>
+  <%= c.submit "Guardar" %>
+
+<% end %>

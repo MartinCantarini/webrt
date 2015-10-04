@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  atcodigodearea: MyString
+  atabonadotelefonico: MyString
+  atcelularofijo: MyString
+  atempresa: MyString
+  atlocalidadcodigoarea: MyString
+
+two:
+  atcodigodearea: MyString
+  atabonadotelefonico: MyString
+  atcelularofijo: MyString
+  atempresa: MyString
+  atlocalidadcodigoarea: MyString

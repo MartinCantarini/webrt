@@ -1,0 +1,53 @@
+<html><br>
+<h1><u>Listado de información vincualda a teléfonos investigados</u></h1><br>
+<p>En el siguiente buscador usted puede filtrar por todos los campos pertenecientes a la primera fila de la siguiente tabla</p>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6"><center>
+
+        <%= form_tag(users_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "" %>
+            <%= submit_tag "Buscar" %>
+        <% end %></center> 
+  </div>
+  <div class="col-md-1"></div>
+  <div class="col-md-9">tt=Titular Tentativo | t=Titular | u=Usuario</div>
+  <div class="col-md-2"><a class="btn btn-success " href="users/new" role="button" style="float:right">Agregar un nuevo registro</a></div>
+</div>
+<table class="table table-bordered">
+  <tr>
+  	<th>Abonado telefónico</th>
+  	<th>Nombre y Apellido(tt)</th>
+  	<th>Nombre y Apellido(t)</th>
+  	<th>Nombre y Apellido(u)</th>
+  	<th>Domicilio(tt)</th>
+  	<th>Domicilio(t)</th>
+  	<th>Domicilio(u)</th>
+  	<th>Documento(tt)</th>
+  	<th>Documento(t)</th>
+  	<th>Documento(tu)</th>
+    <th>IMEI</th>
+    <th>SIM</th>
+  	
+  </tr>
+  <%@user.all.each do |u|%>
+  <tr>
+		  <td><%=link_to u.atabonadotelefonico, u%></td>
+  		<td><%=u.ttnombre%></td>
+  		<td><%=u.tnombre%></td>
+  		<td><%=u.unombre%></td>
+  		<td><%=u.ttdomicilio%></td>
+  		<td><%=u.tdomicilio%></td>
+  		<td><%=u.udomicilio%></td>
+  		<td><%=u.ttdocumento%></td>
+  		<td><%=u.tdocumento%></td>
+  		<td><%=u.udocumento%></td>
+      <td><%=u.atimei%></td>
+      <td><%=u.atsim%></td>
+  		
+  </tr>
+<%end%>
+</table>
+</html>
+
+

@@ -1,0 +1,35 @@
+<html>
+<header>	
+</header>
+<body>
+	<br>
+	<h1><u>Listado de causas vincualda a teléfonos investigados</u></h1><br>
+	<p>En el siguiente buscardor usted puede ingresar el Número de Causa o IPP y obtendra todo los registros que pertenecen a dicha causa</p>
+	<div class="row">
+	<div class="col-md-3"></div>
+	  <div class="col-md-6">
+	  	<center>
+	        <%= form_tag(crimes_path, :method => "get", id: "search-form") do %>
+	            <%= text_field_tag :search, params[:search], placeholder: "" %>
+	            <%= submit_tag "Buscar" %>
+	        <% end %>
+	    </center> 
+	    </br>
+	  </div>
+	</div>  
+	<table class="table table-hover">
+	  <tr>
+	  	<th>Abonado telefónico:</th>
+	  	<th>IPP O CAUSA Nro.:</th>
+	  	<th>Fecha de Requerimiento:</th>
+	  </tr>
+	  <%@crimes.all.each do |c|%>
+	  <tr>
+	  		<td><%=link_to User.find(c.user_id).atabonadotelefonico, user_path(c.user_id)%>
+			<td><%=link_to c.ippcausanro, c%></td>
+	  		<td><%=c.fecha%></td>
+	  </tr>
+	<%end%>
+	</table>	
+</body>	
+</html>

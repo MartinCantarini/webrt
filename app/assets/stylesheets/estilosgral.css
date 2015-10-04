@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: tahoma;
+}	
+
+body{
+	margin: 1cm 1.5cm 1.5cm 1.5cm;
+	background-color: white;
+}
+
+a{
+	color:#000;
+}
+td a:hover{
+	background-color: #5bc0de;
+	color:#000;
+}
+
+.link_right{
+	float: right;
+}
+
+fuente1{
+	font-size: 18px
+}
+fuente2{
+	font-size: 15px
+}

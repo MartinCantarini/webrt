@@ -1,0 +1,35 @@
+<%= bootstrap_form_for(@user) do |u| %>
+  <h3><b><u>Abonado telefonico:</u></b></h3>
+  <p>* Campos obligatorios</p>
+  <div class="row">
+  <div class="col-md-3"><%= u.text_field :atcodigodearea , label: "Codigo de area*", :presence =>true%></div>
+  <div class="col-md-3"><%= u.text_field :atabonadotelefonico, label: "Abonado telefonico*" %></div>
+  <div class="col-md-3"><%= u.select :atcelularofijo,[["celular","celular"],["fijo","fijo"]] ,label: "Celular o fijo" %></div>
+  <div class="col-md-3"><%= u.text_field :atempresa, label: "Empresa"%></div>
+  <div class="col-md-4"><%= u.text_field :atlocalidadcodigoarea, label: "Localidad del Codigo de area" %></div>
+  <div class="col-md-4"><%= u.text_field :atimei, label: "IMEI" %></div>
+  <div class="col-md-4"><%= u.text_field :atsim, label: "SIM" %></div>
+  </div>
+  <div class="row">
+  <h3><b><u>Titular tentativo:</u></b></h3>
+  <div class="col-md-3"><%= u.text_field :ttnombre, label: "Nombre y Apellido" %></div>
+  <div class="col-md-3"><%= u.text_field :ttdomicilio , label: "Domicilio"%></div>
+  <div class="col-md-3"><%= u.text_field :ttlocalidad , label: "Localidad"%></div>
+  <div class="col-md-3"><%= u.text_field :ttdocumento , label: "Documento"%></div>
+  </div>
+  <div class="row">
+  <h3><b><u>Titular:</u></b></h3> 
+  <div class="col-md-3"><%= u.text_field :tnombre, label: "Nombre y Apellido" %></div>
+  <div class="col-md-3"><%= u.text_field :tdomicilio, label: "Domicilio" %></div>
+  <div class="col-md-3"><%= u.text_field :tlocalidad, label: "Localidad" %></div>
+  <div class="col-md-3"><%= u.text_field :tdocumento , label: "Documento"%></div>
+  </div>
+  <div class="row">
+  <h3><b><u>Usuario:</u></b></h3>
+  <div class="col-md-3"><%= u.text_field :unombre, label: "Nombre y Apellido" %></div>
+  <div class="col-md-3"><%= u.text_field :udomicilio, label: "Domicilio" %></div>
+  <div class="col-md-3"><%= u.text_field :ulocalidad, label: "Localidad" %></div>
+  <div class="col-md-3"><%= u.text_field :udocumento, label: "Documento" %></div>
+  </div>
+  <%= u.submit "Guardar" %>
+<% end %>

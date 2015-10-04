@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ippcausanro: MyString
+  delito: MyString
+  interviene: MyString
+  fecha: 2015-09-08 10:21:21
+  detalles: MyText
+
+two:
+  ippcausanro: MyString
+  delito: MyString
+  interviene: MyString
+  fecha: 2015-09-08 10:21:21
+  detalles: MyText
