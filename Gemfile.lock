@@ -74,6 +74,7 @@ GEM
     multi_json (1.11.2)
     orm_adapter (0.5.0)
     pdf-core (0.6.0)
+    pg (0.18.3-x86-mingw32)
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     prawn (2.0.2)
@@ -146,6 +147,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   prawn
   rails (= 4.1.8)
   ransack!
