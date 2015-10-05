@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :crimes
 	validates :atcodigodearea, presence: true 
 	validates :atabonadotelefonico, presence: true
 	def self.search(search)
