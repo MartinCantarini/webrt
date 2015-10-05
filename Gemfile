@@ -46,3 +46,6 @@ gem 'bootstrap_form'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'prawn'
 gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'rails_12factor', group: :production
+ruby "2.1.5"
